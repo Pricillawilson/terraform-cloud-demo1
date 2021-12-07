@@ -3,18 +3,18 @@ data "aws_ami" "amzlinux" {
     owners = ["amazon"]
     filter {
         name = "name"
-        values = ["amzn2-ami-hvm-*-gp2"]
+        values = [ "amzn2-ami-hvm-*-gp2" ]
     }
     filter {
         name = "root-device-type"
-        values = ["ebs"]
+        values = [ "ebs" ]
     }
     filter {
         name = "virtualization-type"
-        values = ["hvm"]
+        values = [ "hvm" ]
     }
     filter {
         name = "architecture"
-        values = ["x86_64"]
+        values = [ "x86_64" ]
     }
 }
