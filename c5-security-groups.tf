@@ -13,11 +13,12 @@ resource "aws_security_group" "vpc-ssh" {
         from_port   = 0
         to_port     = 0
         protocol    = "-1"
-        cidr_blocks = ["0.0.0.0/0"]"
+        cidr_blocks = ["0.0.0.0/0"]
     }
 }
 
 # Create Security Group - Web Traffic
+
 resource "aws_security_group" "vpc-web" {
   name        = "vpc-web-${terraform.workspace}"
   description = "Dev VPC web"
