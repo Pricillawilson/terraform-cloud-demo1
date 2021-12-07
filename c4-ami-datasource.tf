@@ -7,7 +7,7 @@ data "aws_ami" "amzlinux" {
     }
     filter {
         name = "root-device-type"
-        value = ["ebs"]
+        values = ["ebs"]
     }
     filter {
         name = "virtualization"
